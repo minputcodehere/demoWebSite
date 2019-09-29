@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { BusinessComponent } from './business.component';
 import { HomeComponent } from './component/home/home.component';
 import { BusinessRoutingModule } from './business-routing.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -11,7 +13,9 @@ import { BusinessRoutingModule } from './business-routing.module';
   ],
   imports: [
     CommonModule,
-    BusinessRoutingModule
+    BusinessRoutingModule,
+    NgbModule,
+    FormsModule
   ]
 })
 export class BusinessModule { }
