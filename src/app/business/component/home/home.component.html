@@ -1,72 +1,35 @@
-<div class="container">
-  <form class="needs-validation" novalidate>
-    <div class="form-row">
-      <div class="col-md-4 mb-3">
-        <label for="validationTooltip01">姓</label>
-        <input type="text" class="form-control" id="validationTooltip01" placeholder="王" required>
-        <div class="valid-tooltip">
-          Looks good!
-        </div>
-      </div>
-      <div class="col-md-4 mb-3">
-        <label for="validationTooltip02">名</label>
-        <input type="text" class="form-control" id="validationTooltip02" placeholder="大明" required>
-        <div class="valid-tooltip">
-          Looks good!
-        </div>
-      </div>
-      <div class="col-md-4 mb-3">
-        <label for="inputState">性別</label>
-        <select id="inputState" class="form-control">
-          <option selected>請選擇</option>
-          <option>...</option>
-        </select>
-      </div>
+<ngb-carousel *ngIf="images">
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img [src]="images[0]" alt="Random first slide">
     </div>
-    <div class="form-row">
-      <div class="col-md-4 mb-3">
-        <label for="inputState">出生年月</label>
-        <select id="inputState" class="form-control">
-          <option selected>Choose...</option>
-          <option>...</option>
-        </select>
-      </div>
-      <div class="col-md-4 mb-3">
-        <label for="validationTooltip01">電子信箱</label>
-        <input type="text" class="form-control" id="validationTooltip01" placeholder="王" required>
-        <div class="valid-tooltip">
-          Looks good!
-        </div>
-      </div>
-      <div class="col-md-4 mb-3">
-        <label for="validationTooltip02">聯絡電話</label>
-        <input type="text" class="form-control" id="validationTooltip02" placeholder="大明" required>
-        <div class="valid-tooltip">
-          Looks good!
-        </div>
-      </div>
+    <div class="carousel-caption">
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
     </div>
-    <div class="form-row">
-      <div class="form-group col-md-3">
-        <label for="inputState">縣市</label>
-        <select id="inputState" class="form-control">
-          <option selected>請選擇</option>
-          <option>...</option>
-        </select>
-      </div>
-      <div class="form-group col-md-3">
-        <label for="inputState">鄉鎮</label>
-        <select id="inputState" class="form-control">
-          <option selected>請選擇</option>
-          <option>...</option>
-        </select>
-      </div>
-      <div class="form-group col-md-6">
-        <label for="inputCity">地址</label>
-        <input type="text" class="form-control" id="inputCity" placeholder="詳細地址">
-      </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img [src]="images[1]" alt="Random second slide">
     </div>
-    <button type="button" class="btn btn-primary btn-sm btn-block">填寫完成</button>
-    <button type="button" class="btn btn-secondary btn-sm btn-block">重新填寫</button>
-  </form>
+    <div class="carousel-caption">
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img [src]="images[2]" alt="Random third slide">
+    </div>
+    <div class="carousel-caption">
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+<div class="row">
+  <div class="col-sm">
+    <button type="button" class="btn btn-outline-dark" (click)='enter()'>Info</button>
+  </div>
 </div>
