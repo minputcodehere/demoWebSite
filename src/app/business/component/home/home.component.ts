@@ -8,7 +8,6 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-
   images = [1, 2, 3].map(() => `https://picsum.photos/1200/800?random&t=${Math.random()}`);
 
   constructor(

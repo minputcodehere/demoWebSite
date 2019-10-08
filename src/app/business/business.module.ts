@@ -4,22 +4,20 @@ import { CommonModule } from '@angular/common';
 import { BusinessComponent } from './business.component';
 import { HomeComponent } from './component/home/home.component';
 import { BusinessRoutingModule } from './business-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BasicInfoComponent } from './component/basic-info/basic-info.component';
 
 @NgModule({
   declarations: [
     BusinessComponent,
     HomeComponent,
-    BasicInfoComponent
-
-  ],
+    BasicInfoComponent],
   imports: [
     CommonModule,
     BusinessRoutingModule,
     NgbModule,
-    FormsModule
-
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class BusinessModule { }

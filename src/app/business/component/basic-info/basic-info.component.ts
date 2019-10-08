@@ -22,10 +22,6 @@ export class BasicInfoComponent implements OnInit {
   ngOnInit() {
   }
 
-  /**
-   * initForm 初始
-   * @param fb
-   */
   initForm(fb: FormBuilder) {
 
     this.basic_form = this.fb.group({
