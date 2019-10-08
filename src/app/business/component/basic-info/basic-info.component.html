@@ -20,6 +20,6 @@
     <label>地址</label>
     <input type="text" class="form-control" formControlName="userAddress" placeholder="Enter address">
   </div>
-  <button type="button" class="btn btn-primary btn-lg">Submit</button>
-  <button type="button" class="btn btn-secondary btn-lg">Clear</button>
+  <button type="button" class="btn btn-primary btn-lg" (click)="submit(basic_form)" >Submit</button>
+  <button type="button" class="btn btn-secondary btn-lg" (click)="clear()">Clear</button>
 </form>
