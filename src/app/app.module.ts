@@ -17,10 +17,7 @@ import { DatepickerComponent } from './common/componenet/datepicker/datepicker.c
   imports: [
     BrowserModule,
     AppRoutingModule,
-<<<<<<< HEAD
-=======
     HttpClientModule
->>>>>>> dev
   ],
   providers: [],
   bootstrap: [AppComponent]

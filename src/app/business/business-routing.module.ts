@@ -3,7 +3,6 @@ import { BusinessComponent } from './business.component';
 import { HomeComponent } from './component/home/home.component';
 import { BasicInfoComponent } from './component/basic-info/basic-info.component';
 import { NgModule } from '@angular/core';
-import { BasicInfoComponent } from './component/basic-info/basic-info.component';
 
 const routes: Routes = [
   {
