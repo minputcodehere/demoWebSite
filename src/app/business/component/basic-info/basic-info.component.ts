@@ -12,6 +12,11 @@ export class BasicInfoComponent implements OnInit {
   // tslint:disable-next-line: variable-name
   basic_form: FormGroup;
 
+  /**
+   * constructor 建構子
+   * @param fb
+   * @param http
+   */
   constructor(
     private fb: FormBuilder,
     private http: HttpClient) {
@@ -22,6 +27,10 @@ export class BasicInfoComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * initForm 初始化
+   * @param fb
+   */
   initForm(fb: FormBuilder) {
 
     this.basic_form = this.fb.group({
