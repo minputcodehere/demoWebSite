@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { map } from "rxjs/operators";
 
 @Component({
   selector: 'app-basic-info',
@@ -11,6 +13,8 @@ export class BasicInfoComponent implements OnInit {
 
   // tslint:disable-next-line: variable-name
   basic_form: FormGroup;
+
+  private baseUrl: string = '/business/basic_info/';
 
   /**
    * constructor 建構子
@@ -24,7 +28,25 @@ export class BasicInfoComponent implements OnInit {
     this.initForm(fb);
   }
 
+  data: any;
+
+  /**
+   * getUrl 取得路徑
+   * @param path
+   */
+  getUrl(path: string): string {
+
+    return this.baseUrl + 'init';
+  }
+
   ngOnInit() {
+
+    let url = this.getUrl('init');
+
+    this.data = this.http.get(url).subscribe(response => {
+
+      console.log("res >>" + response);
+    });
   }
 
   /**
@@ -42,6 +64,8 @@ export class BasicInfoComponent implements OnInit {
     });
   }
 
+
+
   /**
    * 送出
    */
@@ -52,7 +76,6 @@ export class BasicInfoComponent implements OnInit {
     let userPhone = this.basic_form.get('userPhone').value;
     let userEmail = this.basic_form.get('userEmail').value;
     let userAddress = this.basic_form.get('userAddress').value;
-
     console.log('userName >> ' + userName);
     console.log('userBirth >> ' + userBirth);
     console.log('userPhone >> ' + userPhone);
